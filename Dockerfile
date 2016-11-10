@@ -16,7 +16,7 @@ RUN apt-get -y install tinyproxy
 RUN sed -i -e "s/^Allow /#Allow /" /etc/tinyproxy.conf
 
 RUN echo ConnectPort 1194 >> /etc/tinyproxy.conf
-
+RUN mkdir -p /var/run/tinyproxy
 
 EXPOSE 8888
 ENTRYPOINT ["/usr/sbin/tinyproxy", "-d"]

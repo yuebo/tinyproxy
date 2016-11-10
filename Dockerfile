@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:precise
 MAINTAINER yuebo <317728991@qq.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \

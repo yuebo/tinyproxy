@@ -5,8 +5,8 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
    apt-get update && \
    apt-get upgrade
 RUN locale-gen en_US.UTF-8
-RUN LANG en_US.UTF-8
-RUN LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 
 RUN dpkg-divert --local --rename --add /sbin/initctl && \

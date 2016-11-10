@@ -1,4 +1,4 @@
-FROM ubuntu:precise
+FROM ubuntu
 MAINTAINER yuebo <317728991@qq.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
@@ -18,7 +18,6 @@ RUN sed -i -e "s/^Allow /#Allow /" /etc/tinyproxy.conf
 RUN echo ConnectPort 1194 >> /etc/tinyproxy.conf
 
 
-USER nobody
 EXPOSE 8888
 ENTRYPOINT ["/usr/sbin/tinyproxy", "-d"]
 

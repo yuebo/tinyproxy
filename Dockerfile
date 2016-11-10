@@ -11,8 +11,8 @@ ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
 # Prevent apt-get from complaining with: Unable to connect to Upstart
-RUN dpkg-divert --local --rename --add /sbin/initctl && \
-        ln -s /bin/true /sbin/initctl
+#RUN dpkg-divert --local --rename --add /sbin/initctl && \
+#        ln -s /bin/true /sbin/initctl
 
 # Install Tinyproxy
 RUN apt-get -y install tinyproxy

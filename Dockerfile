@@ -9,8 +9,7 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
 
-RUN dpkg-divert --local --rename --add /sbin/initctl && \
-	ln -s /bin/true /sbin/initctl
+RUN dpkg-divert --local --rename --add /sbin/initctl && ln -s /bin/true /sbin/initctl
 
 RUN apt-get -y install tinyproxy
 
